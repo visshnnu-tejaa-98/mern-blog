@@ -11,8 +11,8 @@ const Home = () => {
 				<div className='bannar '></div>
 				<div className='bannar-overlay d-flex align-items-center d-flex justify-content-center'>
 					<div className=' '>
-						<p className='bannar-heading bold'>Clean Blog</p>
-						<p className='bannar-description'>Blog Theme by Start Bootstrap</p>
+						<p className='bannar-heading bold'>Tech Blogs</p>
+						<p className='bannar-description'>Where you get all News about Tech</p>
 					</div>
 				</div>
 			</header>

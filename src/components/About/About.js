@@ -6,17 +6,17 @@ const About = () => {
 		<div className='about'>
 			<Navbar />
 			<header>
-				<div class=' about-bannar'></div>
-				<div class='bannar-overlay d-flex align-items-center d-flex justify-content-center'>
-					<div class=' '>
-						<p class='bannar-heading bold'>About Me</p>
-						<p class='bannar-description container width'>
+				<div className=' about-bannar'></div>
+				<div className='bannar-overlay d-flex align-items-center d-flex justify-content-center'>
+					<div className=' '>
+						<p className='bannar-heading bold'>About Me</p>
+						<p className='bannar-description container width'>
 							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium aspernatur
 							deserunt asperiores tempora reiciendis, officia sequi vel modi eveniet voluptates.
 						</p>
 					</div>
 				</div>
-				<div class='divider'></div>
+				<div className='divider'></div>
 			</header>
 			<Footer />
 		</div>
