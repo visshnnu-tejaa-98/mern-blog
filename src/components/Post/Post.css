@@ -1,0 +1,26 @@
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	margin: auto 25%;
+	justify-content: center;
+	font-weight: 900;
+	font-size: 2.5rem;
+	margin-bottom: 1%;
+}
+h3 {
+	font-family: 'Open Sans', sans-serif;
+	margin: auto 25%;
+	justify-content: center;
+	font-weight: 300;
+	font-size: 1.8rem;
+	margin-bottom: 1%;
+}
+.p {
+	font-family: serif;
+	margin: auto 25%;
+	justify-content: center;
+	font-weight: 300;
+	font-size: 1.2rem;
+	color: #868e96;
+	font-style: italic;
+	margin-bottom: 2%;
+}
