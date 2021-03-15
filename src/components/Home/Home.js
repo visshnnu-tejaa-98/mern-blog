@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import Post from '../Post/Post';
@@ -17,6 +19,11 @@ const Home = () => {
 				</div>
 			</header>
 			<div className=' divider-special'></div>
+			<div className='strip' id='strip'>
+				<p className='bold'>
+					<Link to='/login'>TRY LOGING IN</Link>
+				</p>
+			</div>
 			<Post />
 			<Post />
 			<Post />

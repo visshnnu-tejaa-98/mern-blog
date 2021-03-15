@@ -1,0 +1,101 @@
+.newPost {
+	background-color: #343a40;
+	padding: 5%;
+	height: 100vh;
+}
+.form-bg {
+	background-color: #343a40;
+}
+.form-middle p {
+	color: white;
+	font-weight: bolder;
+	font-size: 2rem;
+	margin-top: 100px;
+}
+.form-middle div input {
+	border: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	height: 50px;
+}
+.form-middle div textarea {
+	border: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+}
+.form-submit-btn {
+	margin-left: 0;
+	text-transform: uppercase;
+	width: 150px;
+	height: 50px;
+	color: rgba(255, 255, 255, 0.565);
+	font-size: 13px;
+}
+.form-container {
+	width: 50%;
+	margin: 0 25%;
+}
+
+.form-preview {
+	min-height: 50px;
+	border: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+}
+.form-preview,
+.preview-text {
+	padding: 2%;
+	/* background-color: white; */
+	font-size: 5px;
+	color: black;
+}
+.form-middle .preview-text {
+	color: black;
+	background-color: white;
+	padding: 5%;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 1px;
+}
+
+.singlePost-bannar {
+	background: url('https://raw.githubusercontent.com/StartBootstrap/sb-clean-blog-angular/develop/src/assets/img/post-bg.jpg');
+	width: 100vw;
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+}
+
+.singlePost-overlay {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.4);
+	position: relative;
+	color: white;
+	font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.icon a i {
+	color: white;
+}
+
+.icon:hover {
+	background-color: #17a2b8;
+}
+.postContent {
+	font-weight: 900;
+}
+#bg-ur {
+	opacity: 0.5;
+}

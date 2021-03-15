@@ -34,3 +34,21 @@
 .divider-special {
 	height: 20px;
 }
+.strip p a {
+	display: inline-block;
+	color: #17a2b8;
+	padding: 1% 1.5% 1% 1.5%;
+	background-color: white;
+	border: 2px solid #17a2b8;
+	letter-spacing: 1.5px;
+	border-right: none;
+	position: fixed;
+	top: 100px;
+	right: 0px;
+	text-decoration: none;
+}
+.strip p a:hover {
+	background-color: #17a2b8;
+	color: white;
+	text-decoration: none;
+}

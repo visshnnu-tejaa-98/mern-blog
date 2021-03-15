@@ -4,6 +4,8 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import NewPost from './components/NewPost/NewPost';
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
 
 function App() {
 	return (
@@ -20,6 +22,12 @@ function App() {
 				</Route>
 				<Route path='/newpost' exact>
 					<NewPost />
+				</Route>
+				<Route path='/Login' exact>
+					<Login />
+				</Route>
+				<Route path='/register' exact>
+					<Register />
 				</Route>
 			</Switch>
 		</BrowserRouter>
