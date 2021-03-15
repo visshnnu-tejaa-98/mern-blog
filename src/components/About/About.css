@@ -1,0 +1,30 @@
+.about-bannar {
+	background: url('https://raw.githubusercontent.com/StartBootstrap/sb-clean-blog-angular/develop/src/assets/img/about-bg.jpg');
+	width: 100vw;
+	height: 65vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+}
+.bannar-overlay {
+	width: 100vw;
+	height: 65vh;
+	background-color: rgba(0, 0, 0, 0.4);
+	position: relative;
+	color: white;
+	font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.bannar-heading {
+	font-size: 5.5rem;
+}
+.bannar-description {
+	font-size: 1.5rem;
+	font-weight: lighter;
+}
+.divider {
+	height: 50px;
+}
+.width {
+	width: 50%;
+}
