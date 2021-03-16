@@ -1,7 +1,10 @@
-/* .newPost .form-container {
+.newPost {
 	background-color: #343a40;
-} */
-
+	height: 90vh;
+}
+.form-bg {
+	background-color: #343a40;
+}
 .form-middle p {
 	color: white;
 	font-weight: bolder;
@@ -91,4 +94,11 @@
 }
 .postContent {
 	font-weight: 900;
+}
+#bg-ur {
+	opacity: 0.5;
+}
+.small {
+	color: white;
+	opacity: 0.9;
 }

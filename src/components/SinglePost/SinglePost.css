@@ -1,0 +1,62 @@
+.backButton {
+	font-size: 3rem;
+	margin: 1%;
+	display: inline;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 1;
+	color: white;
+}
+
+.backButton:hover {
+	color: #0085a1;
+}
+.singlepost-bannar {
+	background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg');
+	height: 80vh;
+	width: 100vw;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.singlepost-bannar-overlay {
+	background-color: rgba(0, 0, 0, 0.418);
+	height: 80vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.post-data {
+	color: white;
+	/* display: flex; */
+}
+.post-title {
+	font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 3.5rem;
+	font-weight: 900;
+	margin-top: 7%;
+}
+.post-subtitle {
+	font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+.post-date {
+	font-family: serif;
+	font-size: 1.2rem;
+	font-style: italic;
+}
+.post-message {
+	font-family: serif;
+	margin: 5% 25% 0 25%;
+	text-align: justify;
+	font-size: 1.3rem;
+	font-weight: 500;
+	line-height: 1.5;
+}
+.editpostbtn {
+	margin-left: 25%;
+	margin-top: 1%;
+}

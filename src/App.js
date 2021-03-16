@@ -6,6 +6,7 @@ import Contact from './components/Contact/Contact';
 import NewPost from './components/NewPost/NewPost';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
+import SinglePost from './components/SinglePost/SinglePost';
 
 function App() {
 	return (
@@ -28,6 +29,9 @@ function App() {
 				</Route>
 				<Route path='/register' exact>
 					<Register />
+				</Route>
+				<Route path='/singlepost/:id'>
+					<SinglePost />
 				</Route>
 			</Switch>
 		</BrowserRouter>
