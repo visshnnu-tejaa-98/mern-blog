@@ -1,10 +1,11 @@
 import './Post.css';
-const Post = () => {
+import React, { useState } from 'react';
+const Post = ({ heading, subHeading, date }) => {
 	return (
 		<div className='post'>
-			<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ducimus!</h2>
-			<h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.</h3>
-			<p className='p'>March 15, 2021</p>
+			<h2>{heading}</h2>
+			<h3>{subHeading}</h3>
+			<p className='p'>{date && date.split('T')[0].split('-').reverse().join('-')}</p>
 		</div>
 	);
 };

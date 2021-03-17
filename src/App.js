@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import SinglePost from './components/SinglePost/SinglePost';
 import Forgot from './components/Forgot and Reset/Forgot';
 import Reset from './components/Forgot and Reset/Reset';
+import EditPost from './components/EditPost/EditPost';
 
 function App() {
 	return (
@@ -26,6 +27,7 @@ function App() {
 				<Route path='/newpost' exact>
 					<NewPost />
 				</Route>
+
 				<Route path='/Login' exact>
 					<Login />
 				</Route>
@@ -40,6 +42,9 @@ function App() {
 				</Route>
 				<Route path='/singlepost/:id'>
 					<SinglePost />
+				</Route>
+				<Route path='/editpost/:id'>
+					<EditPost />
 				</Route>
 			</Switch>
 		</BrowserRouter>

@@ -52,3 +52,10 @@
 	color: white;
 	text-decoration: none;
 }
+.post-link {
+	text-decoration: none;
+	color: black;
+}
+.post-link:hover {
+	color: #0085a1;
+}

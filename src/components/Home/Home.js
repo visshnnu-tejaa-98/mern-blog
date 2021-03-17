@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import React, { useState, useEffect } from 'react';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import Post from '../Post/Post';
@@ -7,8 +7,19 @@ import { BACKEND_ENDPOINT, FRONTEND_ENDPOINT } from '../endpoint';
 import './Home.css';
 
 const Home = () => {
-	console.log(BACKEND_ENDPOINT);
-	console.log(FRONTEND_ENDPOINT);
+	const [posts, setPosts] = useState([]);
+
+	let getData = async () => {
+		let req = await fetch(`${BACKEND_ENDPOINT}/blogs`, {
+			headers: {
+				authorization: localStorage.getItem('token'),
+			},
+		});
+		let res = await req.json();
+		setPosts(res);
+	};
+	getData();
+
 	return (
 		<div className='home'>
 			<Navbar />
@@ -22,14 +33,21 @@ const Home = () => {
 				</div>
 			</header>
 			<div className=' divider-special'></div>
-			{/* <div className='strip' id='strip'>
-				<p className='bold'>
-					<Link to='/login'>TRY LOGING IN</Link>
-				</p>
-			</div> */}
-			<Post />
-			<Post />
-			<Post />
+			{posts
+				? posts.map((post) => (
+						<Link to={`/singlepost/${post._id}`} className='post-link'>
+							<Post
+								key={post._id}
+								heading={post.heading}
+								subHeading={post.subHeading}
+								url={post.url}
+								email={post.email}
+								body={post.body}
+								date={post.date}
+							/>
+						</Link>
+				  ))
+				: '<h1>Loading...</h1>'}
 			<Footer />
 		</div>
 	);

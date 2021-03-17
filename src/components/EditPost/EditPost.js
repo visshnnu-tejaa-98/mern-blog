@@ -1,18 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BACKEND_ENDPOINT, FRONTEND_ENDPOINT } from '../endpoint';
-import './NewPost.css';
-const NewPost = () => {
+import '../NewPost/NewPost.css';
+const EditPost = () => {
 	const [heading, setHeading] = useState('');
 	const [subHeading, setSubHeading] = useState('');
 	const [url, setUrl] = useState('');
 	const [body, setBody] = useState('');
+	const getSinglePostData = async () => {
+		let url = window.location.href.split('/');
+		let id = url[url.length - 1];
+		let req = await fetch(`${BACKEND_ENDPOINT}/blogs/${id}`, {
+			headers: {
+				authorization: localStorage.getItem('token'),
+			},
+		});
+		let res = await req.json();
+		console.log(res);
+		setBody(res.body);
+		setHeading(res.heading);
+		setSubHeading(res.subHeading);
+		setUrl(res.url);
+	};
+	getSinglePostData();
 	const getData = async () => {
 		if (heading && subHeading && url && body) {
+			let url = window.location.href.split('/');
+			let id = url[url.length - 1];
 			let data = { heading, subHeading, url, body };
 			console.log(data);
-			let req = await fetch(`${BACKEND_ENDPOINT}/postblog`, {
-				method: 'POST',
+			let req = await fetch(`${BACKEND_ENDPOINT}/postblog/${id}`, {
+				method: 'PUT',
 				headers: {
 					'Content-Type': 'application/json',
 					authorization: localStorage.getItem('token'),
@@ -24,12 +42,13 @@ const NewPost = () => {
 			alert('Input fields should not be empty');
 		}
 	};
+
 	return (
 		<div className='newPost'>
 			<div>
 				<div className='container form-container pb-5'>
 					<div className=' form-middle'>
-						<p className='postContent'>Post Content</p>
+						<p className='postContent'>Edit Post</p>
 						<div className='form-group'>
 							<input
 								type='text'
@@ -38,7 +57,9 @@ const NewPost = () => {
 								name='heading'
 								placeholder='Post Heading'
 								value={heading}
-								onChange={(e) => setHeading(e.target.value)}
+								onChange={(e) => {
+									setHeading(e.target.value);
+								}}
 								required
 							/>
 						</div>
@@ -93,7 +114,7 @@ const NewPost = () => {
 								className='new-post form-submit-btn bold button'
 								onClick={getData}
 							>
-								Create post
+								Edit post
 							</button>
 						</Link>
 						{/* <p>Post Content</p>
@@ -107,4 +128,4 @@ const NewPost = () => {
 	);
 };
 
-export default NewPost;
+export default EditPost;

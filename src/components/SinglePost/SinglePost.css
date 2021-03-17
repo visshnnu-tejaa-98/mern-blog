@@ -12,8 +12,8 @@
 .backButton:hover {
 	color: #0085a1;
 }
-.singlepost-bannar {
-	background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg');
+.singlepost-bannar img {
+	/* background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg'); */
 	height: 80vh;
 	width: 100vw;
 	background-position: center;
