@@ -7,6 +7,8 @@ import NewPost from './components/NewPost/NewPost';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import SinglePost from './components/SinglePost/SinglePost';
+import Forgot from './components/Forgot and Reset/Forgot';
+import Reset from './components/Forgot and Reset/Reset';
 
 function App() {
 	return (
@@ -29,6 +31,12 @@ function App() {
 				</Route>
 				<Route path='/register' exact>
 					<Register />
+				</Route>
+				<Route path='/forgot' exact>
+					<Forgot />
+				</Route>
+				<Route path='/reset' exact>
+					<Reset />
 				</Route>
 				<Route path='/singlepost/:id'>
 					<SinglePost />
