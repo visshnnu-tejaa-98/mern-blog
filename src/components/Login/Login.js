@@ -29,7 +29,7 @@ const Register = () => {
 							</Link>
 						</small>
 						<small className='small'>
-							<Link to='/reset'>
+							<Link to='/forgot'>
 								<small className='text-info h6'>Forgot Password?</small>
 							</Link>
 						</small>

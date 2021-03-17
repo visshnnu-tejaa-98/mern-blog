@@ -5,7 +5,7 @@ const Forgot = () => {
 		<div className='newPost'>
 			<div className='container form-container pb-5'>
 				<div className=' form-middle'>
-					<p className='postContent'>Emter Email Here</p>
+					<p className='postContent'>Enter Email Here</p>
 
 					<div className='form-group'>
 						<input
