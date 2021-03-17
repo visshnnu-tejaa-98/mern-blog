@@ -4,7 +4,7 @@ const Reset = () => {
 		<div className='newPost'>
 			<div className='container form-container pb-5'>
 				<div className=' form-middle'>
-					<p className='postContent'>Login Here</p>
+					<p className='postContent'>Reset Password Here</p>
 					<div className='form-group'>
 						<input
 							type='text'
