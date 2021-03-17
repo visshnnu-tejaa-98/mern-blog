@@ -3,9 +3,12 @@ import { Link } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import Post from '../Post/Post';
+import { BACKEND_ENDPOINT, FRONTEND_ENDPOINT } from '../endpoint';
 import './Home.css';
 
 const Home = () => {
+	console.log(BACKEND_ENDPOINT);
+	console.log(FRONTEND_ENDPOINT);
 	return (
 		<div className='home'>
 			<Navbar />
@@ -19,11 +22,11 @@ const Home = () => {
 				</div>
 			</header>
 			<div className=' divider-special'></div>
-			<div className='strip' id='strip'>
+			{/* <div className='strip' id='strip'>
 				<p className='bold'>
 					<Link to='/login'>TRY LOGING IN</Link>
 				</p>
-			</div>
+			</div> */}
 			<Post />
 			<Post />
 			<Post />

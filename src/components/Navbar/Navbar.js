@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './Navbar.css';
 import '../../App.css';
@@ -7,6 +8,9 @@ const Navbar = () => {
 		window.location.href = 'https://github.com';
 		return null;
 	};
+	let token = localStorage.getItem('token');
+	console.log(token);
+
 	return (
 		<div className='navbarComponent'>
 			<nav className='navbar navbar-expand-lg navbar-light bg-light'>
@@ -39,9 +43,15 @@ const Navbar = () => {
 							<Link className='nav-link links' to='#' onClick={hangleGithub}>
 								Github
 							</Link>
-							<Link type='button' className='button' to='./newpost'>
-								<p className='mb-0'>New Post</p>
-							</Link>
+							{token ? (
+								<Link type='button' className='button' to='./newpost'>
+									<p className='mb-0'>new post</p>
+								</Link>
+							) : (
+								<Link type='button' className='button' to='./login'>
+									<p className='mb-0'>Login</p>
+								</Link>
+							)}
 						</div>
 					</div>
 				</div>
