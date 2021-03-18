@@ -3,15 +3,15 @@ import React, { useState } from 'react';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import Post from '../Post/Post';
-import { BACKEND_ENDPOINT, FRONTEND_ENDPOINT } from '../endpoint';
+import { BACKEND_ENDPOINT } from '../endpoint';
 import './Home.css';
 
-const Home = () => {
+const MyPosts = () => {
 	const [posts, setPosts] = useState([]);
 
 	const token = localStorage.getItem('token');
 	let getData = async () => {
-		let req = await fetch(`${BACKEND_ENDPOINT}/blogs`, {
+		let req = await fetch(`${BACKEND_ENDPOINT}/myblogs`, {
 			headers: {
 				authorization: localStorage.getItem('token'),
 			},
@@ -20,9 +20,6 @@ const Home = () => {
 		setPosts(res);
 	};
 	getData();
-	const handleLogin = () => {
-		window.location.href = `${FRONTEND_ENDPOINT}/login`;
-	};
 
 	return (
 		<div className='home'>
@@ -31,7 +28,7 @@ const Home = () => {
 				<div className='bannar '></div>
 				<div className='bannar-overlay d-flex align-items-center d-flex justify-content-center'>
 					<div className=' '>
-						<p className='bannar-heading bold'>Tech Blogs</p>
+						<p className='bannar-heading bold'>My Blogs</p>
 						<p className='bannar-description'>Where you get all News about Tech</p>
 					</div>
 				</div>
@@ -57,11 +54,6 @@ const Home = () => {
 					<h2>Heading</h2>
 					<h3>Sub heading</h3>
 					<p className='p'>March 18 2021</p>
-					<div className='d-flex justify-content-center'>
-						<p className='btn btn-danger' onClick={handleLogin}>
-							Login to experience full functionality
-						</p>
-					</div>
 				</div>
 			)}
 
@@ -70,4 +62,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default MyPosts;

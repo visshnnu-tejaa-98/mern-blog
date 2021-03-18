@@ -7,6 +7,7 @@ const EditPost = () => {
 	const [subHeading, setSubHeading] = useState('');
 	const [url, setUrl] = useState('');
 	const [body, setBody] = useState('');
+	const [run, setRun] = useState(true);
 	const getSinglePostData = async () => {
 		let url = window.location.href.split('/');
 		let id = url[url.length - 1];
@@ -22,14 +23,17 @@ const EditPost = () => {
 		setSubHeading(res.subHeading);
 		setUrl(res.url);
 	};
-	getSinglePostData();
+	if (run) {
+		getSinglePostData();
+		setRun(false);
+	}
 	const getData = async () => {
 		if (heading && subHeading && url && body) {
-			let url = window.location.href.split('/');
-			let id = url[url.length - 1];
+			let windowUrl = window.location.href.split('/');
+			let id = windowUrl[windowUrl.length - 1];
 			let data = { heading, subHeading, url, body };
 			console.log(data);
-			let req = await fetch(`${BACKEND_ENDPOINT}/postblog/${id}`, {
+			let req = await fetch(`${BACKEND_ENDPOINT}/blogs/${id}`, {
 				method: 'PUT',
 				headers: {
 					'Content-Type': 'application/json',

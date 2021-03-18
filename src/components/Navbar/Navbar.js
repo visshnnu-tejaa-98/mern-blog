@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './Navbar.css';
 import '../../App.css';
+import { FRONTEND_ENDPOINT } from '../endpoint';
 const Navbar = () => {
 	const history = useHistory();
 	const hangleGithub = () => {
@@ -9,8 +10,15 @@ const Navbar = () => {
 		return null;
 	};
 	let token = localStorage.getItem('token');
-	console.log(token);
-
+	// console.log(token);
+	const handleLogOut = () => {
+		localStorage.removeItem('token');
+		window.location.href = FRONTEND_ENDPOINT;
+		// console.log('logout');
+	};
+	const handleMyPosts = () => {
+		window.location.href = `${FRONTEND_ENDPOINT}/myposts`;
+	};
 	return (
 		<div className='navbarComponent'>
 			<nav className='navbar navbar-expand-lg navbar-light bg-light'>
@@ -37,12 +45,19 @@ const Navbar = () => {
 							<Link className='nav-link links' to='/about'>
 								About
 							</Link>
-							<Link className='nav-link links' to='/contact'>
-								Contact
-							</Link>
 							<Link className='nav-link links' to='#' onClick={hangleGithub}>
 								Github
 							</Link>
+							{token ? (
+								<Link className='nav-link links' to='#' onClick={handleMyPosts}>
+									MyBlogs
+								</Link>
+							) : null}
+							{token ? (
+								<Link className='nav-link links' to='#' onClick={handleLogOut}>
+									Logout
+								</Link>
+							) : null}
 							{token ? (
 								<Link type='button' className='button' to='./newpost'>
 									<p className='mb-0'>new post</p>

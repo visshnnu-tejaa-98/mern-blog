@@ -10,6 +10,7 @@ import SinglePost from './components/SinglePost/SinglePost';
 import Forgot from './components/Forgot and Reset/Forgot';
 import Reset from './components/Forgot and Reset/Reset';
 import EditPost from './components/EditPost/EditPost';
+import MyPosts from './components/Home/Myposts';
 
 function App() {
 	return (
@@ -39,6 +40,9 @@ function App() {
 				</Route>
 				<Route path='/reset' exact>
 					<Reset />
+				</Route>
+				<Route path='/myposts' exact>
+					<MyPosts />
 				</Route>
 				<Route path='/singlepost/:id'>
 					<SinglePost />
